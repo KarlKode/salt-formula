@@ -8,7 +8,7 @@ salt-master:
   file.recurse:
     - name: {{ salt_settings.config_path }}/master.d
     - template: jinja
-    - source: salt://{{ slspath }}/files/master.d
+    - source: salt://salt/files/master.d
     - clean: {{ salt_settings.clean_config_d_dir }}
     - exclude_pat: _*
   service.running:
